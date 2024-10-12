@@ -5,7 +5,7 @@ import Socials from "../Socials";
 
 const Footer = () => {
   return (
-    <footer className="relative bg-primary text-white px-20 pt-20 pb-10  text-lg">
+    <footer className="relative  text-white px-20 pt-20 pb-10  text-lg">
       <Image
         width={300}
         height={300}
@@ -61,6 +61,7 @@ const Footer = () => {
               <li className="py-2">
                 Address: Popoola street, 7, Mayowa Close, Ago palace way, Lagos
               </li>
+              <br />
               <li>
                 <Socials />
               </li>

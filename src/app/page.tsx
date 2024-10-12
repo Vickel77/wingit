@@ -6,14 +6,15 @@ import { customerReviews, popular } from "@/util/data";
 import { FaArrowRight } from "react-icons/fa";
 import Carousel from "nuka-carousel";
 import Customer from "@/components/Customer";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
     <main className="flex flex-col text-black items-center justify-between bg-primary-accent">
       <NavBar />
 
-      <header className=" relative flex items-center justify-between w-full h-screen pt-20 ">
-        <div className="ml-16 lg:w-[50%]">
+      <header className=" relative flex flex-wrap items-center justify-between w-full h-screen pt-20 height-edit ">
+        <div className="ml-16 lg:w-[37%] md:w-[37%] overflow-hidden hero-text-edit">
           <img
             src="header-left-bg.png"
             alt=""
@@ -37,25 +38,25 @@ export default function Home() {
             </button>
           </div>
         </div>
-        <div className="">
+        <div className="lg:w-[50%] md:w-[50%] hero-img">
           {/* <img
             src="header-right.png"
             alt=""
             width="700"
             className="absolute right-0 top-0"
           /> */}
-          <div className="flex justify-center">
+          <div className="flex justify-center relative article-padding">
             <HeaderFloatingFood />
             <img src="owner.png" alt="" className="relative " />
           </div>
         </div>
       </header>
-      <article className="max-w-6xl bottom-2">
-        <section className="flex justify-between items-center mt-40 ">
-          <div className="w-[100%] mr-20 ">
+      <article className="max-w-6xl bottom-2 w-full article-padding">
+        <section className="flex px-4 edit-flex-reverse about-gap justify-between items-center mt-20 ">
+          <div className="lg:w-[30%] md:w-[30%]  ">
             <img src="about-img.png" alt="" className="" />
           </div>
-          <div>
+          <div className="lg:w-[60%] md:w-[60%] about">
             <h2 className="mb-5 font-bold text-2xl">
               ABOUT <span className="text-primary">US </span>
             </h2>
@@ -70,48 +71,54 @@ export default function Home() {
             </button>
           </div>
         </section>
-        <section className="mt-40 relative max-w-[80%] m-auto">
+        <section className="mt-40 relative w-[100%]  m-auto">
           <h2 className="text-3xl mb-10 text-center font-bold">
             MOST POPULAR
             <span className="text-primary"> FOOD </span>
           </h2>
 
-          <div className="w-full flex gap-5 justify-between z-10">
+          <div className="w-full flex edit-flex flex-wrap justify-center center-items gap-5  z-10">
             {popular.map((item: PopularCardProps) => (
               <PopularCard item={item} />
             ))}
           </div>
         </section>
-        <section className="mt-40 relative max-w-[80%] m-auto">
+        <section className="mt-40 relative w-[100%]  m-auto">
           <h2 className="text-3xl mb-10 text-center font-bold">
             WHY CHOOSE OUR
             <span className="text-primary"> FOOD </span>
           </h2>
 
-          <div className="w-full flex gap-5 justify-between z-10">
+          <div className="w-full flex edit-flex flex-wrap gap-5 justify-between z-10  items-center">
             {[1, 2, 3].map((x) => (
               <ChooseCard />
             ))}
           </div>
         </section>
-        <section className="mt-40 relative max-w-[80%] m-auto">
+        <section className="mt-40 relative w-[100%]  m-auto">
           <h2 className="text-3xl mb-10 text-center font-bold">
             WHAT OUR CUSTOMERS
             <span className="text-primary"> SAY </span>
           </h2>
-          <div className="w-3xl flex gap-5 justify-between z-10 h-60">
-            <Carousel autoplay withoutControls wrapAround>
-              {customerReviews.map((customer) => (
-                <Customer customer={customer} />
-              ))}
-            </Carousel>
-            <div className="w-[100%] mr-20 ">
+          <div className="  w-3xl flex flex-wrap edit-flex  gap-5 justify-between z-10 mb-8">
+            <div className="w-[100%] lg:w-[60%]">
+              <Carousel autoplay withoutControls wrapAround>
+                {customerReviews.map((customer) => (
+                  <Customer customer={customer} />
+                ))}
+              </Carousel>
+            </div>
+            <div className="w-[100%] sm:w-[37%]  ">
               <img src="about-img.png" alt="" className="" />
             </div>
           </div>
         </section>
-        <footer></footer>
       </article>
+      <footer className="w-full">
+        <div className="w-full h-100 bg-primary">
+          <Footer />
+        </div>
+      </footer>
     </main>
   );
 }
@@ -121,19 +128,19 @@ const HeaderFloatingFood = ({}) => {
     <div>
       <img
         src="header-right-3.png"
-        className="absolute top-40 right-[36%] drop-shadow-2xl"
+        className="absolute top-40 right-[36%] drop-shadow-2xl one"
         alt="header plate"
         width={100}
       />
       <img
         src="header-right-2.png"
-        className="absolute top-30 right-20 drop-shadow-2xl"
+        className="absolute top-30 right-20 drop-shadow-2xl two"
         alt="header plate"
         width={100}
       />
       <img
         src="header-right-1.png"
-        className="absolute bottom-40 left-15 drop-shadow-2xl"
+        className="absolute bottom-40 left-15 drop-shadow-2xl three"
         alt="header plate"
         width={150}
       />

@@ -9,16 +9,16 @@ const Socials = () => {
   return (
     <div className=" flex gap-3 ">
       <Link className="hover:opacity-50" href="#">
-        <Twitter size={30} />
+        <Twitter width="25px" className="bg-white" />
       </Link>
       <Link className="hover:opacity-50" href="#">
-        <Instagram size={30} />
+        <Instagram width="25px" />
       </Link>
       <Link className="hover:opacity-50" href="#">
-        <Facebook size={30} />
+        <Facebook width="25px" />
       </Link>
       <Link className="hover:opacity-50" href="#">
-        <YouTube size={30} />
+        <YouTube width="25px" />
       </Link>
     </div>
   );
