@@ -44,6 +44,8 @@ export default function Home() {
             alt=""
             width="700"
             className="absolute right-0 top-0"
+
+            
           /> */}
           <div className="flex justify-center relative article-padding">
             <HeaderFloatingFood />
@@ -89,7 +91,7 @@ export default function Home() {
             <span className="text-primary"> FOOD </span>
           </h2>
 
-          <div className="w-full flex edit-flex flex-wrap gap-5 justify-between z-10  items-center">
+          <div className="w-full flex edit-flex flex-wrap gap-5 justify-between z-10   items-center">
             {[1, 2, 3].map((x) => (
               <ChooseCard />
             ))}
