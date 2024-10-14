@@ -45,7 +45,6 @@ export default function Home() {
             width="700"
             className="absolute right-0 top-0"
 
-            
           /> */}
           <div className="flex justify-center relative article-padding">
             <HeaderFloatingFood />
