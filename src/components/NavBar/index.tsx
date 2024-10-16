@@ -8,11 +8,6 @@ import { MdRestaurantMenu } from "react-icons/md";
 export default function NavBar() {
   const [toogleDropdown, setToogleDropdown] = useState(false);
 
-  const handleClick = () => {
-    alert("I was clicked");
-
-    console.log("hey i'm working");
-  };
   return (
     <div className="w-full">
       <nav className=" gap-6 self-start mt-8 px-5 flex ">
@@ -86,13 +81,13 @@ export default function NavBar() {
                   setToogleDropdown(false);
                 }}
               >
-                Services
+                Contact Us
               </Link>
               <button
                 onClick={() => {
                   setToogleDropdown(false);
                 }}
-                className="cursor-pointer"
+                className="cursor-pointer close-btn"
               >
                 <MdRestaurantMenu size={20} />
               </button>

@@ -32,19 +32,28 @@ body {
 
 .dropdown {
   position: absolute;
-  right: 20px;
   top: 60px;
   display: flex;
   flex-direction: column;
   padding: 10px 10px 10px 30px;
-  background: #f6a616;
   z-index: 99;
-  align-items: flex-end;
+
+  width: 100%;
+  right: 0;
+  backdrop-filter: blur(12px);
+  background: transparent;
+  align-items: flex-start;
+  row-gap: 15px;
 }
 
 .dropdown .link:hover {
-  border-bottom: 1px solid;
+  color: #917b52;
   transition: all ease 0.5s;
+}
+
+.close-btn:hover {
+  color: #917b52;
+  transition: all ease 0.1s;
 }
 
 @media screen and (max-width: 600px) {
