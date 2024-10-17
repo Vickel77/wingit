@@ -31,8 +31,8 @@ body {
 }
 
 .dropdown {
-  position: absolute;
-  top: 60px;
+  /* position: absolute; */
+  /* top: 60px; */
   display: flex;
   flex-direction: column;
   padding: 10px 10px 10px 30px;
@@ -40,10 +40,23 @@ body {
 
   width: 100%;
   right: 0;
-  backdrop-filter: blur(12px);
-  background: transparent;
+  /* backdrop-filter: blur(12px); */
+  background: #ffb10f;
   align-items: flex-start;
   row-gap: 15px;
+
+  padding-top: 45px;
+  top: 0;
+
+  position: fixed;
+  height: 100vh;
+  align-items: flex-end;
+  padding-right: 30px;
+}
+
+.dropdown-logo {
+  position: relative;
+  margin: auto;
 }
 
 .dropdown .link:hover {
@@ -54,6 +67,11 @@ body {
 .close-btn:hover {
   color: #917b52;
   transition: all ease 0.1s;
+}
+
+.img-container {
+  width: 150px;
+  height: fit-content;
 }
 
 @media screen and (max-width: 600px) {
@@ -125,6 +143,20 @@ body {
   .three {
     bottom: 7rem;
     width: 100px;
+  }
+
+  .footer-edit {
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+
+  .footer-flex {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .social-flex {
+    justify-content: center;
   }
 }
 

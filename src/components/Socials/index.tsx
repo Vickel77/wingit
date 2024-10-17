@@ -7,7 +7,7 @@ import Link from "next/link";
 
 const Socials = () => {
   return (
-    <div className=" flex gap-3 ">
+    <div className=" flex gap-3 social-flex">
       <Link className="hover:opacity-50" href="#">
         <Twitter width="25px" className="bg-white" />
       </Link>
