@@ -8,19 +8,13 @@ import { MdRestaurantMenu } from "react-icons/md";
 export default function NavBar() {
   const [toogleDropdown, setToogleDropdown] = useState(false);
 
-  const handleClick = () => {
-    alert("I was clicked");
-
-    console.log("hey i'm working");
-  };
   return (
     <div className="w-full">
       <nav className=" gap-6 self-start mt-8 px-5 flex ">
         {/* desktop navigation */}
-        <div className="sm:flex hidden gap-6">
+        <div className="sm:flex hidden gap-6 items-center">
           <Link href="/">
-            <span className="text-black "> Wing</span>
-            <span className="text-primary ">It</span>
+            <img src="wingit logo.png" width={100} />
           </Link>
           <Link href="/" className="text-primary ">
             Home
@@ -38,8 +32,7 @@ export default function NavBar() {
         {/* mobile navigation */}
         <div className="sm:hidden flex justify-between w-full postion-relative">
           <Link href="/">
-            <span className="text-black "> Wing</span>
-            <span className="text-primary ">It</span>
+            <img src="wingit logo.png" width={80} />
           </Link>
 
           <div
@@ -52,7 +45,7 @@ export default function NavBar() {
 
           {toogleDropdown && (
             <div className="dropdown">
-              <Link
+              {/* <Link
                 href="/"
                 className="link "
                 onClick={() => {
@@ -60,6 +53,10 @@ export default function NavBar() {
                 }}
               >
                 Home
+              </Link> */}
+
+              <Link href="/">
+                <img src="wingit logo.png" width={80} />
               </Link>
               <Link
                 href="/"
@@ -86,16 +83,22 @@ export default function NavBar() {
                   setToogleDropdown(false);
                 }}
               >
-                Services
+                Contact Us
               </Link>
               <button
                 onClick={() => {
                   setToogleDropdown(false);
                 }}
-                className="cursor-pointer"
+                className="cursor-pointer close-btn"
               >
                 <MdRestaurantMenu size={20} />
               </button>
+
+              {/* <div className="dropdown-logo ">
+                <Link href="/">
+                  <img src="wingit logo.png" width={180} />
+                </Link>
+              </div> */}
             </div>
           )}
         </div>

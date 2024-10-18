@@ -5,18 +5,20 @@ import Socials from "../Socials";
 
 const Footer = () => {
   return (
-    <footer className="relative  text-white px-20 pt-20 pb-10  text-lg">
-      <Image
-        width={300}
-        height={300}
-        className=" absolute bottom-0 left-0 z-0 "
-        alt="fruit frame"
-        src="/img-wheat.png"
-      />
+    <footer className="relative  text-white px-20 pt-20 pb-10  text-lg  footer-edit">
       <div className="container mx-auto px-4 relative">
-        <div className="flex flex-wrap justify-between">
+        <div className="flex flex-wrap justify-between  footer-flex">
+          <div className="img-container">
+            <Image
+              className=" w-full "
+              alt="fruit frame"
+              src="/wingit logo.png"
+              width={100}
+              height={100}
+            />
+          </div>
           {/* Company Info */}
-          <div className="w-full md:w-1/3 mb-6 md:mb-0">
+          <div className="w-full md:w-1/4 mb-6 md:mb-0">
             <h5 className="text-lg font-semibold mb-2">Orangedrops</h5>
             <p className="text-sm py-2">
               Pioneering food production and health
@@ -24,7 +26,7 @@ const Footer = () => {
           </div>
 
           {/* Quick Links */}
-          <div className="w-full md:w-1/3 mb-6 md:mb-0">
+          <div className="w-full md:w-1/4 mb-6 md:mb-0">
             <h5 className="text-lg font-semibold mb-2">Quick Links</h5>
             <ul className="text-sm">
               <li className="py-2">
@@ -43,7 +45,7 @@ const Footer = () => {
           </div>
 
           {/* Contact Info */}
-          <div className="w-full md:w-1/3">
+          <div className="w-full md:w-1/4">
             <h5 className="text-lg font-semibold mb-2">Contact Us</h5>
             <ul className="text-sm">
               <li className="py-2">
