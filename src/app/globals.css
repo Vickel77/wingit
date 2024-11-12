@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+/* @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"); */
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -24,6 +26,7 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+  /* font-family: "Montserrat" sans-serif; */
 }
 
 .article-padding {
@@ -41,7 +44,7 @@ body {
   width: 100%;
   right: 0;
   /* backdrop-filter: blur(12px); */
-  background: #ffb10f;
+  background: #fe9306;
   align-items: flex-start;
   row-gap: 15px;
 
@@ -72,6 +75,237 @@ body {
 .img-container {
   width: 150px;
   height: fit-content;
+}
+
+.red-dot {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #ff0000;
+  position: absolute;
+  top: -2px;
+  right: -4px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 12px;
+}
+
+.modal-container {
+  /* background: ; */
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  backdrop-filter: blur(15px);
+  z-index: 99;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #fe93062e;
+}
+
+.modal-content {
+  width: 50%;
+  background: #fff;
+  padding: 20px;
+  border-radius: 25px;
+}
+
+.close-modal {
+  width: 52%;
+  text-align: end;
+  display: flex;
+  justify-content: flex-end;
+  cursor: pointer;
+}
+
+.close-modal p {
+  background-color: grey;
+  color: #fef8e7;
+  font-size: 16px;
+  border-radius: 50%;
+  width: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-container {
+  padding: 1.3rem 7rem;
+}
+
+.google-btn:hover {
+  background-color: #fe93062e;
+}
+
+.google-btn,
+input {
+  border: solid 0.4px;
+  border-radius: 10px;
+}
+
+.submit-btn {
+  border-radius: 10px;
+  color: #fff;
+}
+
+.hr-line {
+  width: 45%;
+  height: 1px;
+  background-color: #000;
+}
+
+input {
+  width: 100%;
+  padding: 10px 20px;
+  border-color: #6e6d6d;
+}
+input:focus {
+  outline: none;
+}
+
+.signup-link p {
+  border-bottom: 1px solid #fe9306;
+  color: #fe9306;
+  width: fit-content;
+}
+
+.success-container {
+  background-color: #ffc7001a;
+  border-radius: 10px;
+}
+
+/* menu page */
+
+.menu_hero-section {
+  padding: 50px 100px;
+}
+
+.menu_hero-section > p:first-of-type {
+  font-size: 50px;
+  font-weight: 400;
+  line-height: 40px;
+}
+
+.food-tray {
+  /* width: 40%; */
+  right: 0;
+  top: 30px;
+}
+
+.blur-tray {
+  width: 15%;
+  left: 0;
+  top: 400px;
+}
+
+/* carousel */
+
+.carousel_outer-container {
+  /* width: 57%; */
+  width: 620px;
+}
+
+.carousel-container {
+  width: 600px;
+  overflow-x: scroll;
+
+  scrollbar-width: none;
+}
+
+.carousel-card {
+  width: fit-content;
+}
+
+.forward-btn,
+.backward-btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.forward-btn {
+  right: -45px;
+}
+
+.backward-btn {
+  left: -45px;
+}
+
+/* search input */
+.searchbar-container {
+  margin: auto;
+
+  padding: 5px 20px;
+  background: #fff;
+  border-radius: 10px;
+}
+
+.searchbar-container input {
+  border: none;
+  background: transparent;
+  text-align: center;
+  font-family: "Montserrat";
+}
+
+.pills-container {
+  gap: 10px;
+  margin: auto;
+  justify-content: space-around;
+  font-family: "Montserrat";
+  color: #fff;
+}
+
+.pill {
+  width: Hug (165px) px;
+  height: Fixed (46.64px) px;
+  padding: 10px 44px 10px 44px;
+  border-radius: 200px;
+  background: #00000035;
+  font-weight: 600;
+}
+
+.pill:hover {
+  opacity: 0.8;
+}
+
+#active-pill {
+  background-color: #fe9306;
+  opacity: 1;
+}
+
+.col-4 {
+  width: 24%;
+
+  text-align: center;
+}
+
+.menu-card-edit {
+  min-width: 280px;
+}
+
+@media screen and (max-width: 600px) {
+  .modal-content {
+    width: 88%;
+  }
+
+  .close-modal {
+    width: 90%;
+  }
+
+  .col-4 {
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -169,5 +403,9 @@ body {
     font-size: 3rem;
     line-height: 1.2;
     margin-bottom: 1.1rem;
+  }
+
+  .col-4 {
+    width: 45%;
   }
 }

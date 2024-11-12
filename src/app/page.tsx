@@ -10,10 +10,8 @@ import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
-    <main className="flex flex-col text-black items-center justify-between bg-primary-accent">
-      <NavBar />
-
-      <header className=" relative flex flex-wrap items-center justify-between w-full h-screen pt-20 height-edit ">
+    <>
+      <header className=" container relative flex flex-wrap items-center justify-between w-full h-screen pt-20 height-edit ">
         <div className="ml-16 lg:w-[37%] md:w-[37%] overflow-hidden hero-text-edit">
           <img
             src="header-left-bg.png"
@@ -115,12 +113,7 @@ export default function Home() {
           </div>
         </section>
       </article>
-      <footer className="w-full">
-        <div className="w-full h-100 bg-primary">
-          <Footer />
-        </div>
-      </footer>
-    </main>
+    </>
   );
 }
 
