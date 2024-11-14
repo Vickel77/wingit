@@ -209,14 +209,18 @@ input:focus {
 
 .carousel_outer-container {
   /* width: 57%; */
-  width: 620px;
+  width: 650px;
+  position: relative;
 }
 
 .carousel-container {
-  width: 600px;
+  /* width: 600px;
   overflow-x: scroll;
 
-  scrollbar-width: none;
+  scrollbar-width: none; */
+
+  overflow: hidden;
+  width: 100%;
 }
 
 .carousel-card {
