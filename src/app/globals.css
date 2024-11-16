@@ -277,15 +277,16 @@ input:focus {
   border-radius: 200px;
   background: #00000035;
   font-weight: 600;
+  cursor: pointer;
 }
 
 .pill:hover {
   opacity: 0.8;
 }
 
-#active-pill {
-  background-color: #fe9306;
-  opacity: 1;
+.active-pill {
+  background-color: #fe9306 !important;
+  opacity: 1 !important;
 }
 
 .col-4 {
