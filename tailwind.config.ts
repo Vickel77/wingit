@@ -13,7 +13,7 @@ const config: Config = {
     extend: {
       colors: {
         primary: "#FE9306",
-        "primary-accent": "#FEF8E7",
+        "primary-accent": "#FBF6C7",
         black: "#333333",
         white: "#fff",
         textColor: "#333333",

@@ -7,7 +7,7 @@ const categories = [
   {
     id: "sides",
     name: "Sides",
-    image: "plate-2.png",
+    image: "smile.png",
     price: "2000",
     subTitle: "Dinner",
     title: "Local Fries",
@@ -16,7 +16,7 @@ const categories = [
   {
     id: "sides",
     name: "Sides",
-    image: "plate-1.png",
+    image: "fries.png",
     price: "1000",
     subTitle: "Break Fast",
     title: "Indian Fries",
@@ -24,7 +24,7 @@ const categories = [
   {
     id: "snacks",
     name: "Snacks",
-    image: "header-right-3.png",
+    image: "snack.png",
     price: "5000",
     subTitle: "Lunch",
     title: "French Fries",
@@ -48,7 +48,7 @@ const categories = [
   {
     id: "sides",
     name: "Sides",
-    image: "header-right-3.png",
+    image: "plantain.png",
     price: "3000",
     subTitle: "Lunch",
     title: "French Fries",
@@ -57,7 +57,15 @@ const categories = [
   {
     id: "snacks",
     name: "Snacks",
-    image: "plate-2.png",
+    image: "shawarma.png",
+    price: "2000",
+    subTitle: "Dinner",
+    title: "Local Fries",
+  },
+  {
+    id: "snacks",
+    name: "Snacks",
+    image: "mac.png",
     price: "2000",
     subTitle: "Dinner",
     title: "Local Fries",
@@ -93,6 +101,12 @@ export default function FoodMenuTab() {
 
   const handleTabClick = (id) => {
     setActiveCategory(id);
+
+    const tabBg = document.getElementById("blurBg");
+
+    if (category.id === "sides") {
+      tabBg.src = "smile.png";
+    }
   };
 
   const activeCategoryCards = categories.filter(
@@ -127,13 +141,9 @@ export default function FoodMenuTab() {
           {activeCategoryCards.map(
             ({ image, price, subTitle, title }, index) => (
               <div className="col-4" key={index}>
-                <div className="hover:shadow-2xl hover:translate-y-[-10px] transition-all bg-white rounded-3xl card-edit menu-card-edit">
+                <div className="hover:shadow-2xl hover:translate-y-[-10px] transition-all bg-white rounded-3xl card-edit menu-card-edit overflow-hidden">
                   <div className="h-[200px] w-full flex justify-center items-center overflow-hidden">
-                    <img
-                      src={image}
-                      alt=""
-                      className="drop-shadow-2xl w-[55%]"
-                    />
+                    <img src={image} alt="" className=" w-full" />
                   </div>
                   <div className="p-5">
                     <div className=" mb-5 w-full flex justify-between  items-start">

@@ -10,7 +10,9 @@ export interface PopularCardProps {
 export default function PopularCard({ item }: { item: PopularCardProps }) {
   const { image, title, subTitle, price } = item;
   return (
-    <div className="hover:shadow-2xl hover:translate-y-[-10px] transition-all  w-[280px] border-[1px] border-primary rounded-3xl card-edit">
+    <div
+      className={`hover:shadow-2xl hover:translate-y-[-10px] transition-all  w-[280px] border-[1px] border-primary rounded-3xl `}
+    >
       <div className="h-[200px] w-full flex justify-center items-center">
         <img src={image} alt="" width={150} className="drop-shadow-2xl" />
       </div>

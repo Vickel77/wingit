@@ -27,7 +27,7 @@ export default function Menu() {
       </div>
       <section className="w-full overflow-hidden relative ">
         <div className="bg-img absolute w-full">
-          <img src="blur-bg.png" alt="" className="w-full" />
+          <img src="blur-bg.png" alt="" className="w-full" id="blurBg" />
         </div>
         <div className="container px-5 w-full relative z-5 m-auto pb-8">
           <SearchBar />
