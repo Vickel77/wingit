@@ -2,114 +2,22 @@
 
 import { useState } from "react";
 import FiveStar from "../Icons/FiveStar";
+import { menuCategories } from "@/util/data";
 
-const categories = [
-  {
-    id: "sides",
-    name: "Sides",
-    image: "smile.png",
-    price: "2000",
-    subTitle: "Dinner",
-    title: "Local Fries",
-  },
-
-  {
-    id: "sides",
-    name: "Sides",
-    image: "fries.png",
-    price: "1000",
-    subTitle: "Break Fast",
-    title: "Indian Fries",
-  },
-  {
-    id: "snacks",
-    name: "Snacks",
-    image: "snack.png",
-    price: "5000",
-    subTitle: "Lunch",
-    title: "French Fries",
-  },
-  {
-    id: "drinks",
-    name: "Drinks",
-    image: "plate-1.png",
-    price: "1000",
-    subTitle: "Break Fast",
-    title: "Indian Fries",
-  },
-  {
-    id: "h-regs",
-    name: "House Regulars",
-    image: "header-right-3.png",
-    price: "3000",
-    subTitle: "Lunch",
-    title: "French Fries",
-  },
-  {
-    id: "sides",
-    name: "Sides",
-    image: "plantain.png",
-    price: "3000",
-    subTitle: "Lunch",
-    title: "French Fries",
-  },
-
-  {
-    id: "snacks",
-    name: "Snacks",
-    image: "shawarma.png",
-    price: "2000",
-    subTitle: "Dinner",
-    title: "Local Fries",
-  },
-  {
-    id: "snacks",
-    name: "Snacks",
-    image: "mac.png",
-    price: "2000",
-    subTitle: "Dinner",
-    title: "Local Fries",
-  },
-  {
-    id: "drinks",
-    name: "Drinks",
-    image: "header-right-3.png",
-    price: "5000",
-    subTitle: "Lunch",
-    title: "French Fries",
-  },
-  {
-    id: "h-regs",
-    name: "House Regulars",
-    image: "plate-1.png",
-    price: "1000",
-    subTitle: "Break Fast",
-    title: "Indian Fries",
-  },
-  {
-    id: "sides",
-    name: "Sides",
-    image: "plate-2.png",
-    price: "2000",
-    subTitle: "Dinner",
-    title: "Local Fries",
-  },
-];
-
-export default function FoodMenuTab() {
-  const [activeCategory, setActiveCategory] = useState("sides");
-
-  const handleTabClick = (id) => {
+export default function FoodMenuTab({
+  activeCategory,
+  setActiveCategory,
+}: {
+  activeCategory: string;
+  setActiveCategory: any;
+}) {
+  const handleTabClick = (id: string) => {
     setActiveCategory(id);
 
     const tabBg = document.getElementById("blurBg");
-
-    if (category.id === "sides") {
-      tabBg.src = "smile.png";
-    }
   };
 
-  const activeCategoryCards = categories.filter(
+  const activeCategoryCards = menuCategories.filter(
     (category) => category.id === activeCategory
   );
 
@@ -118,7 +26,9 @@ export default function FoodMenuTab() {
       <section className="container">
         <div className="pills-container flex w-[80%]">
           {[
-            ...new Map(categories.map((item) => [item.name, item])).values(),
+            ...new Map(
+              menuCategories.map((item) => [item.name, item])
+            ).values(),
           ].map((category) => (
             <div
               key={category.id}
