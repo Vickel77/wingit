@@ -6,12 +6,23 @@ export interface PopularCardProps {
   title: string;
   subTitle: string;
   price: string;
+  bgColor?: string;
 }
-export default function PopularCard({ item }: { item: PopularCardProps }) {
+export default function PopularCard({
+  item,
+  bgColor,
+}: {
+  item: PopularCardProps;
+  bgColor?: string;
+}) {
   const { image, title, subTitle, price } = item;
+  console.log({ bgColor });
   return (
     <div
-      className={`hover:shadow-2xl hover:translate-y-[-10px] transition-all  w-[280px] border-[1px] border-primary rounded-3xl `}
+      style={{ backgroundColor: bgColor }}
+      className={`hover:shadow-2xl hover:translate-y-[-10px] transition-all  w-[280px] ${
+        !bgColor && "border-[1px] border-primary"
+      }  rounded-3xl `}
     >
       <div className="h-[200px] w-full flex justify-center items-center">
         <img src={image} alt="" width={150} className="drop-shadow-2xl" />

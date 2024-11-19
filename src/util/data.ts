@@ -6,18 +6,21 @@ export const popular: PopularCardProps[] = [
     price: "5000",
     subTitle: "Break Fast",
     title: "Indian Fries",
+    bgColor: "#FFE0E099",
   },
   {
     image: "header-right-3.png",
     price: "5000",
     subTitle: "Lunch",
     title: "French Fries",
+    bgColor: "#FFF7E099",
   },
   {
     image: "plate-2.png",
     price: "5000",
     subTitle: "Dinner",
     title: "Local Fries",
+    bgColor: "#E2E2E299",
   },
 ];
 
@@ -57,7 +60,6 @@ export const menuCategories: menuCategories[] = [
     subTitle: "Dinner",
     title: "Local Fries",
   },
-
   {
     id: "sides",
     name: "Sides",
