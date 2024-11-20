@@ -14,9 +14,9 @@ export default function Menu() {
       case "sides":
         return "blur-bg.png";
       case "snacks":
-        return "about-img.png";
+        return "snack-blur-bg.png";
       default:
-        return "";
+        return "blur-bg.png";
     }
   };
 

@@ -236,6 +236,8 @@ input:focus {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  box-shadow: 0px 10px 20px 0px #00000040;
 }
 
 .forward-btn {
@@ -297,6 +299,7 @@ input:focus {
 
 .menu-card-edit {
   min-width: 280px;
+  background-color: #ffffff80;
 }
 
 @media screen and (max-width: 600px) {

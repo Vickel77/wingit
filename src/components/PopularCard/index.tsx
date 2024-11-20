@@ -30,7 +30,7 @@ export default function PopularCard({
       <div className="p-5">
         <div className=" mb-5 w-full flex justify-between  items-start">
           <div>
-            <h3 className="p-0 m-0 leading-none font-bold">{title}</h3>
+            <h3 className="p-0 m-0 leading-none font-medium">{title}</h3>
             <small className="p-0 m-0 opacity-55">{subTitle}</small>
           </div>
           <div className="font-bold">₦{price}</div>

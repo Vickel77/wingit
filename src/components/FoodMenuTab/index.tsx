@@ -51,14 +51,14 @@ export default function FoodMenuTab({
           {activeCategoryCards.map(
             ({ image, price, subTitle, title }, index) => (
               <div className="col-4" key={index}>
-                <div className="hover:shadow-2xl hover:translate-y-[-10px] transition-all bg-white rounded-3xl card-edit menu-card-edit overflow-hidden">
-                  <div className="h-[200px] w-full flex justify-center items-center overflow-hidden">
-                    <img src={image} alt="" className=" w-full" />
+                <div className="hover:shadow-2xl hover:translate-y-[-10px] transition-all  rounded-[2rem] card-edit menu-card-edit overflow-hidden">
+                  <div className="h-[200px] w-full flex justify-center items-center overflow-hidden rounded-b-3xl">
+                    <img src={image} alt="" className=" w-full 	" />
                   </div>
                   <div className="p-5">
-                    <div className=" mb-5 w-full flex justify-between  items-start">
-                      <div>
-                        <h3 className="p-0 m-0 leading-none font-bold">
+                    <div className=" mb-5 w-full flex justify-between items-start">
+                      <div className="flex-col flex items-start">
+                        <h3 className="p-0 m-0 leading-none font-[500]">
                           {title}
                         </h3>
                         <small className="p-0 m-0 opacity-55">{subTitle}</small>

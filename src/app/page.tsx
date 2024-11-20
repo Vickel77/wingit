@@ -7,6 +7,7 @@ import { FaArrowRight } from "react-icons/fa";
 import Carousel from "nuka-carousel";
 import Customer from "@/components/Customer";
 import Footer from "@/components/Footer";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -28,11 +29,14 @@ export default function Home() {
             have a swell time eating
           </small>
           <div>
-            <button className=" shadow-2xl flex items-center justify-between bg-black  rounded-full px-3 py-3 text-white mt-5">
+            <button className=" shadow-2xl flex items-center justify-between bg-black  rounded-full px-3 py-3 text-white mt-5 relative z-10">
               <p className="pr-5 pl-3 text-xl">Explore Menu</p>
-              <div className="flex items-center justify-center w-10 h-10 bg-primary rounded-full stroke-black fill-black ">
-                <FaArrowRight color="#333" />
-              </div>
+
+              <Link href="/menu">
+                <div className="flex items-center justify-center w-10 h-10 bg-primary rounded-full stroke-black fill-black cursor-pointer">
+                  <FaArrowRight color="#333" />
+                </div>
+              </Link>
             </button>
           </div>
         </div>
