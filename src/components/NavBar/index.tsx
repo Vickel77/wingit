@@ -16,11 +16,11 @@ export default function NavBar() {
 
   return (
     <>
-      <div className="w-full container">
+      <div className="w-full container relative z-50">
         <nav className=" gap-6 self-start mt-8 px-5 flex ">
           {/* desktop navigation */}
           <div className="sm:flex hidden gap-6 items-center justify-between w-full">
-            <Link href="/">
+            <Link href="/" className="inline-block">
               <img src="wingit logo.png" width={100} />
             </Link>
             <div className="flex gap-6 pr-4">
