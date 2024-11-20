@@ -102,12 +102,10 @@ export default function FoodMenuTab() {
   const handleTabClick = (id) => {
     setActiveCategory(id);
 
-    const tabBg = document.getElementById("blurBg");
-
-    if (category.id === "sides") {
-      tabBg.src = "smile.png";
-    }
   };
+
+
+  
 
   const activeCategoryCards = categories.filter(
     (category) => category.id === activeCategory
