@@ -2,7 +2,7 @@ export default function SearchBar() {
   return (
     <div>
       <form action="" className="w-full">
-        <div className="searchbar-container w-[80%] flex items-center justify-center gap-3">
+        <div className="searchbar-container w-[100%] lg:w-[80%] flex items-center justify-center gap-3">
           <div className="search-icon">
             <svg
               width="20"

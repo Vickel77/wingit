@@ -24,7 +24,7 @@ export default function FoodMenuTab({
   return (
     <div>
       <section className="container">
-        <div className="pills-container flex w-[80%]">
+        <div className="pills-container flex w-[80%] flex-wrap">
           {[
             ...new Map(
               menuCategories.map((item) => [item.name, item])
@@ -47,7 +47,7 @@ export default function FoodMenuTab({
         <br />
         <br />
 
-        <div className="menu-card_container gap-[15px] flex justify-start w-full flex-wrap">
+        <div className="menu-card_container gap-[70px] lg:gap-[15px] flex justify-start w-full flex-wrap">
           {activeCategoryCards.map(
             ({ image, price, subTitle, title }, index) => (
               <div className="col-4" key={index}>

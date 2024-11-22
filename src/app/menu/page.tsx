@@ -27,7 +27,7 @@ export default function Menu() {
           <p className="text-black ">Order your</p>
           <p className=" font-bold text-6xl mb-5 text-primary">Favorite Food</p>
           <div className="food-tray absolute ">
-            <div className="food-tray_image ">
+            <div className="food-tray_image hidden lg:block">
               <img src="food-tray.png" alt="" width={450} />
             </div>
           </div>
