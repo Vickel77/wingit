@@ -7,13 +7,12 @@ import { FaArrowRight } from "react-icons/fa";
 import Carousel from "nuka-carousel";
 import Customer from "@/components/Customer";
 import Footer from "@/components/Footer";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="flex flex-col text-black items-center justify-between bg-primary-accent">
-      <NavBar />
-
-      <header className=" relative flex flex-wrap items-center justify-between w-full h-screen pt-20 height-edit ">
+    <>
+      <header className=" container relative flex flex-wrap items-center justify-between w-full h-screen pt-20 height-edit ">
         <div className="ml-16 lg:w-[37%] md:w-[37%] overflow-hidden hero-text-edit">
           <img
             src="header-left-bg.png"
@@ -30,11 +29,14 @@ export default function Home() {
             have a swell time eating
           </small>
           <div>
-            <button className=" shadow-2xl flex items-center justify-between bg-black  rounded-full px-3 py-3 text-white mt-5">
+            <button className=" shadow-2xl flex items-center justify-between bg-black  rounded-full px-3 py-3 text-white mt-5 relative z-10">
               <p className="pr-5 pl-3 text-xl">Explore Menu</p>
-              <div className="flex items-center justify-center w-10 h-10 bg-primary rounded-full stroke-black fill-black ">
-                <FaArrowRight color="#333" />
-              </div>
+
+              <Link href="/menu">
+                <div className="flex items-center justify-center w-10 h-10 bg-primary rounded-full stroke-black fill-black cursor-pointer">
+                  <FaArrowRight color="#333" />
+                </div>
+              </Link>
             </button>
           </div>
         </div>
@@ -115,12 +117,7 @@ export default function Home() {
           </div>
         </section>
       </article>
-      <footer className="w-full">
-        <div className="w-full h-100 bg-primary">
-          <Footer />
-        </div>
-      </footer>
-    </main>
+    </>
   );
 }
 
