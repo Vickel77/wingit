@@ -61,6 +61,9 @@ export default function CartItems() {
         <p className="text-primary font-bold text-2xl">#8000</p>
       </div>
 
+      <br />
+      <br />
+
       <button className="w-[60%] m-auto bg-primary text-white py-2 rounded-lg">
         Checkout
       </button>
