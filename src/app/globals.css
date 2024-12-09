@@ -311,6 +311,30 @@ input:focus {
   border-radius: 100%;
 }
 
+/* Cart page */
+
+.cart-container {
+  width: 50%;
+  color: #000;
+}
+
+.oval {
+  width: 100px;
+  height: 70px;
+  overflow: hidden;
+  border-radius: 100px;
+
+  background-color: #e90000;
+}
+
+.cart-btn {
+  /* width: 25px; */
+}
+
+.cart-btn svg {
+  /* width: 100%; */
+}
+
 @media screen and (max-width: 990px) {
   .article-padding {
     padding: 0 20px;
@@ -321,7 +345,6 @@ input:focus {
     line-height: 1.2;
     margin-bottom: 1.1rem;
   }
-
   .col-4 {
     width: 45%;
   }
@@ -329,7 +352,6 @@ input:focus {
     padding-left: 20px;
     padding-right: 20px;
   }
-
   .carousel_outer-container {
     margin: auto;
     width: 620px;
